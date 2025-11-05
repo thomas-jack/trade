@@ -49,7 +49,7 @@ const App: React.FC = () => {
         <div className="min-h-screen flex flex-col">
           <ToastManager />
           <Header />
-          <main className="flex-1 container mx-auto p-4 md:p-6 lg:p-8">
+          <main className="flex-1 container mx-auto p-2 sm:p-4 md:p-6 lg:p-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
               {/* Left Column (or top on mobile) */}
               <div className="lg:col-span-2 space-y-6">

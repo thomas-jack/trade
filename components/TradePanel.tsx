@@ -210,7 +210,7 @@ const TradePanel: React.FC = () => {
         </CardHeader>
         <CardContent>
           {/* The negative margin pulls the chart to the edges of the card, overriding the CardContent padding */}
-          <div className="-mx-6">
+          <div className="-mx-4 md:-mx-6">
               <PriceChart />
           </div>
           <div className="mt-6 border-t pt-6">

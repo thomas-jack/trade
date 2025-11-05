@@ -148,15 +148,15 @@ const PriceChart: React.FC = () => {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-4 px-6">
-        <div>
+      <div className="flex flex-wrap justify-between items-center mb-4 px-4 md:px-6">
+        <div className="w-full sm:w-auto flex justify-start">
           {isZoomed && (
             <Button onClick={resetZoom} variant="ghost" className="text-sm px-3 py-1">
               {t('priceChart.resetZoom')}
             </Button>
           )}
         </div>
-        <div className="flex justify-end space-x-2">
+        <div className="w-full sm:w-auto flex flex-wrap justify-center sm:justify-end gap-2 mt-2 sm:mt-0">
             {timeRanges.map(range => (
                 <Button 
                     key={range.id} 
@@ -176,7 +176,7 @@ const PriceChart: React.FC = () => {
       </div>
       
       {/* Main Chart (Zoomed View) */}
-      <div style={{ width: '100%', height: 280 }}>
+      <div className="w-full h-[220px] md:h-[280px]">
         <ResponsiveContainer>
           <AreaChart data={historicalData} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
             <defs>
@@ -219,8 +219,8 @@ const PriceChart: React.FC = () => {
         </ResponsiveContainer>
       </div>
 
-      {/* Context Chart (Brush View) */}
-      <div style={{ width: '100%', height: 70, marginTop: '1rem' }}>
+      {/* Context Chart (Brush View) - Hidden on mobile */}
+      <div className="w-full h-[70px] mt-4 hidden md:block">
         <ResponsiveContainer>
           <AreaChart data={historicalData}>
             <XAxis dataKey="timestamp" tick={false} axisLine={false} hide/>

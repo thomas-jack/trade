@@ -14,7 +14,7 @@ const TransactionRow: React.FC<{ tx: Transaction; onClick: () => void }> = ({ tx
     <Tooltip text={t('transactionHistory.tooltips.viewDetails')} position="left" wrapperClassName="w-full">
       <div 
         onClick={onClick}
-        className="grid grid-cols-3 gap-2 py-3 border-b border-border text-sm cursor-pointer hover:bg-accent transition-colors duration-150 w-full"
+        className="grid grid-cols-3 gap-2 py-2 md:py-3 border-b border-border text-sm cursor-pointer hover:bg-accent transition-colors duration-150 w-full"
       >
         <div>
           <span className={`font-semibold ${isBuy ? 'text-brand-green' : 'text-brand-red'}`}>
