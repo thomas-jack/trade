@@ -12,6 +12,7 @@ const resources = {
         welcome: "Welcome, Trader!",
         homeLink: "CryptoSim homepage",
         languageSwitcher: "Language switcher",
+        userProfile: "User profile",
         tooltips: {
           switchToEn: "Switch to English",
           switchToZh: "Switch to Chinese"
@@ -135,6 +136,7 @@ const resources = {
         welcome: "欢迎，交易员！",
         homeLink: "CryptoSim 首页",
         languageSwitcher: "语言切换器",
+        userProfile: "用户资料",
         tooltips: {
           switchToEn: "切换到英语",
           switchToZh: "切换到中文"

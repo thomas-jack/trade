@@ -52,6 +52,17 @@ const Header: React.FC = () => {
               </Button>
             </Tooltip>
           </nav>
+
+          {/* User Profile Section */}
+          <div className="flex items-center space-x-2 cursor-pointer" aria-label={t('header.userProfile')}>
+            <div className="h-8 w-8 rounded-full bg-secondary flex items-center justify-center" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-secondary-foreground" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <span className="text-sm font-medium hidden sm:inline-block">Trader</span>
+          </div>
+
         </div>
       </div>
     </header>
