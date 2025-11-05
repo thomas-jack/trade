@@ -1,5 +1,4 @@
 
-
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -13,6 +12,8 @@ const resources = {
         homeLink: "CryptoSim homepage",
         languageSwitcher: "Language switcher",
         userProfile: "User profile",
+        login: "Login",
+        logout: "Logout",
         tooltips: {
           switchToEn: "Switch to English",
           switchToZh: "Switch to Chinese"
@@ -121,7 +122,8 @@ const resources = {
         connected: "Connected",
         disconnected: "Disconnected",
         waitingForTrades: "Waiting for trades...",
-        connecting: "Connecting..."
+        connecting: "Connecting...",
+        authenticating: "Authenticating..."
       },
       languages: {
         en: "English",
@@ -137,6 +139,8 @@ const resources = {
         homeLink: "CryptoSim 首页",
         languageSwitcher: "语言切换器",
         userProfile: "用户资料",
+        login: "登录",
+        logout: "登出",
         tooltips: {
           switchToEn: "切换到英语",
           switchToZh: "切换到中文"
@@ -245,7 +249,8 @@ const resources = {
         connected: "已连接",
         disconnected: "已断开",
         waitingForTrades: "等待交易...",
-        connecting: "连接中..."
+        connecting: "连接中...",
+        authenticating: "认证中..."
       },
       languages: {
         en: "English",

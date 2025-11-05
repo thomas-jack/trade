@@ -1,4 +1,8 @@
 
+export interface User {
+  name: string;
+  avatarUrl: string;
+}
 
 export enum TransactionType {
   BUY = 'BUY',

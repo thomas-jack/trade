@@ -1,12 +1,13 @@
 
-
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Button from './ui/Button';
 import { Tooltip } from './ui/Tooltip';
+import { useAuth } from '../hooks/useAuth';
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
+  const { user, login, logout, isLoading } = useAuth();
   const currentLanguage = i18n.language;
 
   const changeLanguage = (lang: 'en' | 'zh-CN') => {
@@ -54,13 +55,22 @@ const Header: React.FC = () => {
           </nav>
 
           {/* User Profile Section */}
-          <div className="flex items-center space-x-2 cursor-pointer" aria-label={t('header.userProfile')}>
-            <div className="h-8 w-8 rounded-full bg-secondary flex items-center justify-center" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-secondary-foreground" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-              </svg>
-            </div>
-            <span className="text-sm font-medium hidden sm:inline-block">Trader</span>
+          <div className="flex items-center space-x-2">
+            {!isLoading && user ? (
+              <>
+                <div className="flex items-center space-x-2">
+                    <img src={user.avatarUrl} alt={t('header.userProfile')} className="h-8 w-8 rounded-full" />
+                    <span className="text-sm font-medium hidden sm:inline-block">{user.name}</span>
+                </div>
+                <Button variant="ghost" size="sm" onClick={logout}>
+                  {t('header.logout')}
+                </Button>
+              </>
+            ) : !isLoading && (
+              <Button variant="default" size="sm" onClick={login}>
+                {t('header.login')}
+              </Button>
+            )}
           </div>
 
         </div>
