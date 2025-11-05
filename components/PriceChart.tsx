@@ -4,7 +4,7 @@ import { useBitcoinPrice } from '../hooks/useBitcoinPrice';
 import Button from './ui/Button';
 import { useTranslation } from 'react-i18next';
 import { PriceDataPoint } from '../types';
-import { cn } from '../../lib/utils';
+import { cn } from '../lib/utils';
 
 interface CustomTooltipProps {
   active?: boolean;
